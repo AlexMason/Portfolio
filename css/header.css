@@ -1,0 +1,26 @@
+.ch-name,
+.ch-links {
+  font-family: "Fira Code", monospace;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0px 0px 1px black;
+}
+
+.ch-name > span {
+  color: var(--p-color-2);
+}
+
+.ch-links > a {
+  color: var(--p-color-2);
+  text-decoration: none;
+  text-shadow: 0px 0px 1px black;
+  font-weight: 700;
+}
+
+.ch-links > a.active {
+  text-decoration: underline;
+}
+
+.ch-links > a:hover {
+  text-decoration: underline;
+}
