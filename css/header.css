@@ -47,7 +47,7 @@
   padding: 5rem 0rem;
 }
 
-.ch-hero > div > span > strong {
+.ch-hero > div > strong {
   background-color: var(--p-color-3);
   padding: 0em 0.1em;
 }
