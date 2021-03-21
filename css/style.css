@@ -2,3 +2,8 @@
 @import "./variables.css";
 @import "./body.css";
 @import "./header.css";
+@import "./about.css";
+
+.yuge {
+  height: 2000px;
+}

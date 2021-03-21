@@ -1,4 +1,6 @@
 html,
 body {
   background-color: var(--p-color-1);
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
