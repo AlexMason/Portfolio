@@ -1,0 +1,42 @@
+.cp-proj-header {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  background-color: var(--p-color-5);
+  box-shadow: -5px 7px 2px black;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  color: var(--p-color-6);
+}
+
+.cp-proj-card {
+  background-color: var(--p-color-5);
+  box-shadow: -5px 7px 2px;
+}
+
+.cd-proj-card-img > img {
+  object-fit: cover;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+}
+
+.cp-hero {
+  background-color: var(--p-color-4);
+  font-size: 72px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: -2px 2px black;
+  /* text-shadow: 0px 0px 5px black; */
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 5rem 0rem;
+}
+
+.cd-proj-card-body {
+  color: white;
+}
+
+.cp-btn {
+  border-radius: 0px;
+}

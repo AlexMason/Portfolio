@@ -3,6 +3,7 @@
 @import "./body.css";
 @import "./header.css";
 @import "./about.css";
+@import "./project.css";
 
 .yuge {
   height: 2000px;

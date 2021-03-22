@@ -49,3 +49,37 @@
   border-top: 40px solid var(--p-color-4);
   border-right: 40px solid transparent;
 }
+
+.ca-skill-slider-item {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 0px 20px;
+}
+
+.ca-skill-slider-item > img {
+  fill: white;
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes hide {
+}
