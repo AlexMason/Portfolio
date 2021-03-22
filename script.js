@@ -3,12 +3,6 @@
 let nav = document.getElementById("nav");
 let navLinks = document.querySelectorAll("#typing-links > a");
 
-const resizeObserver = new ResizeObserver((entries) => {
-  console.log("hi");
-});
-
-resizeObserver.observe(nav);
-
 document.addEventListener("scroll", () => {
   if (window.scrollY <= 70) {
     nav.classList.remove("pt-3");
@@ -34,7 +28,11 @@ navLinks.forEach((navLink) => {
 
     if (href !== "" && href.substr(0, 1) === "#") {
       let scrollToElement = document.getElementById(href.substr(1));
-      scrollToElement.scrollIntoView();
+      //scrollToElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      window.scrollTo({
+        top: scrollToElement.offsetTop - 62 - 20,
+        behavior: "smooth",
+      });
     } else if (href !== "") {
       window.open(href, "_blank");
     }

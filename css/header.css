@@ -6,6 +6,7 @@
   width: inherit;
   background-color: var(--p-color-1);
   box-shadow: 0px 0px 10px var(--p-color-6);
+  z-index: 1000;
 }
 
 .ch-nav-border {
@@ -29,10 +30,12 @@
   text-decoration: none;
   text-shadow: 0px 0px 1px black;
   font-weight: 700;
+  padding: 0rem 0.2rem;
 }
 
 .ch-links > a.active {
   text-decoration: underline;
+  color: var(--p-color-2-light);
 }
 
 .ch-links > a:hover {
