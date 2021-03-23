@@ -148,3 +148,59 @@ setInterval(() => {
   skillSliderIndex++;
 }, 5000);
 //Skill slider END
+
+//Formspree Submit
+
+let form = document.getElementById("contact-form");
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+
+  data = new FormData(e.target);
+  let contactModalText = document.getElementById("contactModalText");
+
+  let contactModal = new bootstrap.Modal(
+    document.getElementById("contact-modal")
+  );
+
+  fetch(e.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((res) => {
+      form.reset();
+
+      if (!res.ok) {
+        contactModalText.innerText =
+          "Oops!  Something wen't wrong, please try to re-submit again.  Sorry about that!";
+      }
+
+      contactModal.show();
+
+      return res.json();
+    })
+    .catch((err) => {
+      contactModalText.innerText =
+        "Oops!  Something wen't wrong, please try to resubmit again.  Sorry about that!";
+      contactModal.show();
+    });
+};
+
+document.getElementById("footer-email").onclick = () => {
+  let scrollToElement = document.getElementById("contact");
+
+  window.scrollTo({
+    top: scrollToElement.offsetTop - 62 - 20,
+    behavior: "smooth",
+  });
+};
+
+document.getElementById("footer-linkedin").onclick = () => {
+  window.open(
+    "https://www.linkedin.com/in/alexander-mason-76856346/",
+    "_blank"
+  );
+};

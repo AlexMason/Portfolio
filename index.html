@@ -13,6 +13,7 @@
 
   <!-- Personal Styles -->
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/86979804d6.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="top">
@@ -43,7 +44,7 @@
   </div>
 
   <!-- About Me -->
-  <div class="container ca-main" id="about">
+  <div class="container ca-main" id="about" style="margin: 120px auto;">
     <div class="row p-0 mb-5 ca-aboutme">
       <div class="col-12 d-flex p-0">
         <div class="ca-row-header">About Me</div>
@@ -95,7 +96,7 @@
     <div class="container text-center">Projects</div>
   </div>
 
-  <div class="container">
+  <div class="container" style="margin: 120px auto">
     <!-- <div class="row">
       <div class="col cp-proj-header">Projects</div>
     </div> -->
@@ -222,13 +223,64 @@
     <div class="container text-center">Get in touch</div>
   </div>
 
-  <div class="container">
-    contact
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <br><br><br>
+        <form action="https://formspree.io/f/xpzkarzo" id="contact-form" method="post">
+          <div class="input-group mb-3">
+            <!-- <span class="input-group-text" style="border-radius: 0px;">Name</span> -->
+            <input type="text" placeholder="Your name... (e.g. John Doe)" class="form-control form-control-lg"
+              style="border-radius: 0px;" name="inputContactName" id="inputContactName">
+          </div>
+          <div class="input-group mb-3">
+            <!-- <span class="input-group-text" style="border-radius: 0px;">Email</span> -->
+            <input type="email" placeholder="Your email... (e.g. contact@johndoe.me)"
+              class="form-control form-control-lg" style="border-radius: 0px;" name="inputContactEmail"
+              id="inputContactEmail">
+          </div>
+          <div class="input-group mb-3">
+            <textarea name="inputContactBody" style="border-radius: 0px;" id="" rows="5"
+              class="form-control form-control-lg"
+              placeholder="Feel free to reach out with any question or inquiries..."></textarea>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <input id="contactSubmitButton" type="submit" class="cc-submit-btn btn btn-outline-light"
+              style="border-radius: 0px; margin: auto;" value="Send" />
+          </div>
+        </form>
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal" id="contact-modal">
+    <div class="modal-dialog modal-dialog-centered cc-modal-dialog">
+      <div class="modal-content cc-modal-content">
+        <div class="modal-header cc-modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body cc-modal-body">
+          <p id="contactModalText">Thank you for reaching out to me, I typically reply back with a response in 24-48
+            hours.</p>
+        </div>
+        <div class="modal-footer cc-modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
-  <div class="container" id="footer">
-
+  <div id="footer">
+    <div class="d-flex flex-column p-5">
+      <div class="mx-auto m-4">
+        <i class="m-3 fas fa-at fa-3x" id="footer-email"></i>
+        <i class="m-3 fab fa-linkedin fa-3x" id="footer-linkedin"></i>
+      </div>
+      <div class="mx-auto">&copy; 2021 Alexander Mason, All Rights Reserved</div>
+    </div>
   </div>
 
   <div class="yuge" id="yuge"></div>

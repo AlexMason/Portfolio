@@ -4,7 +4,11 @@
 @import "./header.css";
 @import "./about.css";
 @import "./project.css";
+@import "./contact.css";
+@import "./footer.css";
 
-.yuge {
-  height: 2000px;
+.fas:hover,
+.fab:hover {
+  cursor: pointer;
+  color: var(--p-color-2);
 }
