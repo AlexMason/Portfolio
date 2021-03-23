@@ -43,7 +43,13 @@ navLinks.forEach((navLink) => {
 //Skill slider
 skillSlider = {
   fadeOut: () => {
-    let firstItem = document.getElementById("skill-slider").children[0];
+    let parent = document.getElementById("skill-slider");
+
+    while (parent.children.length > 5) {
+      parent.removeChild(parent.firstChild);
+    }
+
+    let firstItem = parent.children[0];
 
     let fadeOut = firstItem.animate(
       {
@@ -53,6 +59,7 @@ skillSlider = {
         padding: [0],
         marginLeft: [0],
         marginRight: [0],
+        fontSize: [0],
       },
       2000
     );
@@ -61,13 +68,16 @@ skillSlider = {
       firstItem.remove();
     };
   },
-  fadeIn: (imgSrc, time) => {
+  fadeIn: (data, time) => {
     let parent = document.getElementById("skill-slider");
     let li = document.createElement("li");
     let img = document.createElement("img");
+    let p = document.createElement("p");
 
     li.className = "ca-skill-slider-item";
-    img.src = imgSrc;
+    img.src = data.imgSrc;
+    p.innerText = data.name;
+    p.className = "text-center pt-3";
 
     let fadeIn = li.animate(
       {
@@ -77,42 +87,49 @@ skillSlider = {
         padding: [0, 10],
         marginLeft: [0, 20],
         marginRight: [0, 20],
+        fontSize: [0, 1],
       },
       time
     );
 
     li.appendChild(img);
+    li.appendChild(p);
     parent.appendChild(li);
   },
 };
 
 let skillSvgs = [
-  "bootstrap",
-  "css3",
-  "html5",
-  "javascript",
-  "wordpress",
-  "node-dot-js",
-  "react",
-  "typescript",
-  "gatsby",
-  "visualstudiocode",
-  "git",
-  "github",
-  "python",
-  "java",
-  "php",
-  "postgresql",
-  "mysql",
-  "sqlite",
-  "linux",
+  "Bootstrap 5:bootstrap",
+  "CSS 3:css3",
+  "HTML 5:html5",
+  "JavaScript:javascript",
+  "WordPress:wordpress",
+  "Node.JS:node-dot-js",
+  "React.js:react",
+  "TypeScript:typescript",
+  "Gatsby.js:gatsby",
+  "VS Code:visualstudiocode",
+  "Git:git",
+  "Github:github",
+  "Python:python",
+  "Java:java",
+  "PHP:php",
+  "PostgreSQL:postgresql",
+  "MySQL:mysql",
+  "SQLite:sqlite",
+  "Linux:linux",
 ];
 
 let skillSliderIndex = 0;
 let skillSliderDefaultItems = 5;
 
 for (let i = 0; i < skillSliderDefaultItems; i++) {
-  skillSlider.fadeIn(`./assets/${skillSvgs[skillSliderIndex]}.svg`, 0);
+  let data = {
+    name: skillSvgs[skillSliderIndex].split(":")[0],
+    imgSrc: `./assets/${skillSvgs[skillSliderIndex].split(":")[1]}.svg`,
+  };
+
+  skillSlider.fadeIn(data, 0);
   skillSliderIndex++;
 }
 
@@ -121,8 +138,13 @@ setInterval(() => {
 
   if (skillSliderIndex == skillSvgs.length) skillSliderIndex = 0;
 
-  skillSlider.fadeIn(`./assets/${skillSvgs[skillSliderIndex]}.svg`, 2000);
+  let data = {
+    name: skillSvgs[skillSliderIndex].split(":")[0],
+    imgSrc: `./assets/${skillSvgs[skillSliderIndex].split(":")[1]}.svg`,
+  };
+
+  skillSlider.fadeIn(data, 2000);
 
   skillSliderIndex++;
-}, 2500);
+}, 5000);
 //Skill slider END

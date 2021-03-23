@@ -58,8 +58,8 @@
   margin: 0px 20px;
 }
 
-.ca-skill-slider-item > img {
-  fill: white;
+.ca-skill-slider > li > p {
+  color: white;
 }
 
 @keyframes show {
