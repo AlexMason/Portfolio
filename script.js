@@ -172,15 +172,18 @@ form.onsubmit = (e) => {
   })
     .then((res) => {
       form.reset();
+      console.log(res);
 
-      if (!res.ok) {
+      if (res.status != 200) {
+        console.log("hi?");
         contactModalText.innerText =
           "Oops!  Something wen't wrong, please try to re-submit again.  Sorry about that!";
+      } else {
+        contactModalText.innerText =
+          "Thank you for reaching out to me, I typically reply back with a response in 24-48 hours.";
       }
 
       contactModal.show();
-
-      return res.json();
     })
     .catch((err) => {
       contactModalText.innerText =
