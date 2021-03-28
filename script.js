@@ -172,10 +172,8 @@ form.onsubmit = (e) => {
   })
     .then((res) => {
       form.reset();
-      console.log(res);
 
       if (res.status != 200) {
-        console.log("hi?");
         contactModalText.innerText =
           "Oops!  Something wen't wrong, please try to re-submit again.  Sorry about that!";
       } else {
@@ -206,4 +204,8 @@ document.getElementById("footer-linkedin").onclick = () => {
     "https://www.linkedin.com/in/alexander-mason-76856346/",
     "_blank"
   );
+};
+
+document.getElementById("footer-github").onclick = () => {
+  window.open("https://github.com/alexmason", "_blank");
 };

@@ -32,6 +32,7 @@
   /* text-shadow: 0px 0px 5px black; */
   font-family: "Roboto Condensed", sans-serif;
   padding: 5rem 0rem;
+  box-shadow: 0px 0px 10px black;
 }
 
 .cd-proj-card-body {
@@ -40,4 +41,9 @@
 
 .cp-btn {
   border-radius: 0px;
+}
+
+.cp-btn > a {
+  color: inherit;
+  text-decoration: none;
 }

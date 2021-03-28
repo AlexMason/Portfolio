@@ -1,5 +1,5 @@
 #footer {
   background-color: var(--p-color-6);
-
+  box-shadow: 0px 0px 20px black;
   color: white;
 }
