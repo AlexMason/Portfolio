@@ -55,10 +55,8 @@ skillSlider = {
       {
         opacity: [0],
         width: [0],
-        height: [0],
         padding: [0],
-        marginLeft: [0],
-        marginRight: [0],
+        margin: [0],
         fontSize: [0],
       },
       2000
@@ -78,12 +76,12 @@ skillSlider = {
     img.src = data.imgSrc;
     p.innerText = data.name;
     p.className = "text-center pt-3";
+    p.style.zIndex = "1000";
 
     let fadeIn = li.animate(
       {
         opacity: [0, 1],
         width: [0, 150],
-        height: [0, 150],
         padding: [0, 10],
         marginLeft: [0, 20],
         marginRight: [0, 20],
