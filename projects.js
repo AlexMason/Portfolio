@@ -28,7 +28,7 @@ function addProject(data) {
 
 let projects = [
   {
-    title: "STATIC LAYOUT",
+    title: "Static Layout",
     img: "./assets/kast.png",
     desc:
       "This is a visual recreation of the Kastapp.co website. It is meant to demonstrate the understanding of CSS properties and layout.",
