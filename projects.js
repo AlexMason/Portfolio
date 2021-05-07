@@ -56,10 +56,11 @@ let projects = [
     url: "https://wd80api2-59733.web.app/",
   },
   {
-    title: "Blue Badge",
-    img: "https://via.placeholder.com/450?text=Blue%20Badge",
-    desc: "This is a placeholder for my blue badge project.",
-    url: "",
+    title: "FlickView",
+    img: "./assets/bluebadge.png",
+    desc:
+      "FlickView is a movie review + watchlist app that I built with a team of 3 people.",
+    url: "https://aem-bb-client.herokuapp.com/",
   },
   {
     title: "Red Badge",

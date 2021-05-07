@@ -188,6 +188,7 @@ form.onsubmit = (e) => {
     });
 };
 
+//footer links
 document.getElementById("footer-email").onclick = () => {
   let scrollToElement = document.getElementById("contact");
 
