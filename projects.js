@@ -61,7 +61,7 @@ let projects = [
     title: "upstring",
     img: "./assets/redbadge.png",
     desc: "upstring if a complete topic and comment issue board.  It was developed with TypeScript + React techologies and utilizes tailwindcss for the design.",
-    url: "",
+    url: "https://aem-rb-client.herokuapp.com/",
   },
 ];
 
